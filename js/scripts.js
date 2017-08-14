@@ -17,13 +17,15 @@ var divide = function(number1, number2) {
 
 //USER-INTERFACE OR FRONT-END LOGIC
 $(document).ready(function() {
-      var number1 = parseInt(prompt("Enter a number:"));
-      var number2 = parseInt(prompt("Enter another number:"));
+  $("form#add").submit(function(event) {
+    event.preventDefault();
+    var number1 = parseInt($("#add1").val());
+    var number2 = parseInt($("#add2").val());
 
-      var addresult = add(number1, number2);
-      alert(addresult);
+    var addresult = add(number1, number2);
+    alert(addresult);
 
-      /*
+    /*
       var minusresult = minus(number1, number2);
       alert(minusresult);
 
@@ -33,4 +35,5 @@ $(document).ready(function() {
       var divideresult = divide(number1, number2);
       alert(divideresult);
 */
-    }
+  });
+});
