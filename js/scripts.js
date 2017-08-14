@@ -23,7 +23,7 @@ $(document).ready(function() {
     var number2 = parseInt($("#add2").val());
 
     var addresult = add(number1, number2);
-    alert(addresult);
+    $("#output").text(addresult);
 
     /*
       var minusresult = minus(number1, number2);
